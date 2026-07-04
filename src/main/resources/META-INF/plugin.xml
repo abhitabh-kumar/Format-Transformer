@@ -1,20 +1,61 @@
 <idea-plugin>
     <id>com.jsonformatter.format-transformer</id>
     <name>Format Transformer</name>
-    <vendor email="support@jsonformatter.dev" url="https://github.com/jsonformatter/format-transformer">
-        Format Transformer Team
+    <vendor email="abhitabhpersonal2024@gmail.com"
+            url="https://github.com/abhitabh-kumar/Format-Transformer">
+        Abhitabh Kumar
     </vendor>
 
     <description><![CDATA[
-        <p>Convert JSON into developer-friendly formats directly inside IntelliJ IDEA.</p>
-        <p>Fully offline. No AI. No cloud. No API calls.</p>
+        <p><b>Convert JSON into developer-friendly formats.</b></p>
+        <p>Format Transformer is a lightweight IntelliJ IDEA plugin that converts JSON into multiple
+        output formats using an extensible conversion engine. Fully offline — no AI, no cloud, no API calls.</p>
+        <h3>Supported output formats</h3>
         <ul>
-            <li>application.properties, YAML, XML, Text, CSV, Markdown, Java Map, Java Properties</li>
-            <li>Nested objects, arrays, booleans, numbers, strings, and null values</li>
-            <li>Extensible converter engine for future formats</li>
-            <li>Opens converted output in a new editor tab without modifying the original file</li>
+            <li>application.properties</li>
+            <li>YAML</li>
+            <li>XML</li>
+            <li>Plain Text</li>
+            <li>CSV</li>
+            <li>Markdown Table</li>
+            <li>Java Map</li>
+            <li>Java Properties Object</li>
         </ul>
+        <h3>Features</h3>
+        <ul>
+            <li>Nested objects, arrays, booleans, numbers, strings, and null values</li>
+            <li>Unlimited nesting depth with recursive conversion</li>
+            <li>Strict JSON validation with clear error dialog before conversion</li>
+            <li>Saves converted output next to the source JSON file</li>
+            <li>Opens result in a new editor tab without modifying the original file</li>
+            <li>Right-click menu and toolbar popup for quick format selection</li>
+            <li>Extensible converter engine — new formats can be added without changing existing code</li>
+        </ul>
+        <h3>How to use</h3>
+        <ol>
+            <li>Open a JSON file in the editor</li>
+            <li>Right-click → <b>Convert JSON</b> → select a format</li>
+            <li>View the converted file in a new editor tab</li>
+        </ol>
+        <p>
+            <a href="https://github.com/abhitabh-kumar/Format-Transformer/blob/main/README.md">Documentation</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/abhitabh-kumar/Format-Transformer/issues">Issue tracker</a>
+        </p>
     ]]></description>
+
+    <change-notes><![CDATA[
+        <h3>2.0.0</h3>
+        <ul>
+            <li>Extensible conversion engine with Strategy + Factory architecture</li>
+            <li>Eight output formats: properties, YAML, XML, Text, CSV, Markdown, Java Map, Java Properties</li>
+            <li>Dynamic Convert JSON submenu and toolbar popup</li>
+            <li>Save converted output next to the source JSON file</li>
+            <li>Strict JSON validation with error dialog</li>
+        </ul>
+    ]]></change-notes>
+
+    <idea-version since-build="261"/>
 
     <depends>com.intellij.modules.platform</depends>
 
@@ -35,6 +76,7 @@
         <group id="FormatTransformer.ConvertJsonGroup"
                class="com.jsonformatter.actions.ConvertJsonActionGroup"
                text="Convert JSON"
+               description="Convert JSON into developer-friendly formats"
                popup="true"
                icon="/icons/pluginIcon.svg">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>

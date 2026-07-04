@@ -46,9 +46,9 @@ intellijPlatform {
         """.trimIndent()
 
         vendor {
-            name = "Format Transformer Team"
-            email = "support@jsonformatter.dev"
-            url = "https://github.com/jsonformatter/format-transformer"
+            name = "Abhitabh Kumar"
+            email = "abhitabhpersonal2024@gmail.com"
+            url = "https://github.com/abhitabh-kumar/Format-Transformer"
         }
 
         ideaVersion {
